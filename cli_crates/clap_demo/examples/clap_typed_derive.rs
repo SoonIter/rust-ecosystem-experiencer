@@ -17,7 +17,7 @@ struct Args {
   #[arg(long)]
   bind: Option<std::net::IpAddr>,
 
-    #[arg(short = 'D', value_parser = parse_key_val::<String, i32>)]
+  #[arg(short = 'D', value_parser = parse_key_val::<String, i32>)]
   defines: Vec<(String, i32)>,
 
   /// Support for discrete numbers
