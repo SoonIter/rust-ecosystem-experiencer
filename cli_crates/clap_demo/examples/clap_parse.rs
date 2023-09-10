@@ -4,7 +4,7 @@ use clap::Parser;
 
 /// 运行参数
 #[derive(Parser, Debug)]
-#[clap(name = "Anti Facist Indoctrination")]
+#[clap(name = "Anti Fascist Indoctrination")]
 #[clap(about = "--------------------\n   clap-rs\n--------------------\n\nauthor: foo\nclap_parse")]
 #[clap(version, author = "野兽先辈")]
 pub struct Args {

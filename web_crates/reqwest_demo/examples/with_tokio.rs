@@ -17,7 +17,7 @@ struct Article {
 async fn main() -> Result<()> {
   let client = reqwest::Client::new();
   // let client = reqwest::Client::builder()
-  //   .proxy(reqwest::Proxy::all("http://127.0.0.1:8899")?)
+  //   .proxy(reqwest::Proxy::all("htt://127.0.0.1:8899")?)
   //   .build()?;
 
   let url = Url::from_str("https://jsonplaceholder.typicode.com/posts")?;
