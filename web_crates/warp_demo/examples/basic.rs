@@ -46,7 +46,9 @@ async fn main() -> Result<(), ()> {
   let dir_static = warp::fs::dir(WEB_DIR);
 
   let apis = hello.or(hi).or(items).with(log);
-  warp::serve(dir_static.or(apis)).run(([127, 0, 0, 1], 3000)).await;
+  warp::serve(dir_static.or(apis))
+    .run(([127, 0, 0, 1], 3000))
+    .await;
 
   Ok(())
 }
