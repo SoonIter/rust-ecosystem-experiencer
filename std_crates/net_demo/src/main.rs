@@ -1,7 +1,7 @@
 use net_demo::ThreadPool;
 use std::fs;
-use std::io::BufReader;
 use std::io::prelude::*;
+use std::io::BufReader;
 use std::net::TcpListener;
 use std::net::TcpStream;
 use std::thread;

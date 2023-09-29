@@ -16,14 +16,8 @@ async fn main() {
   let login_path = warp::get().and(warp::path!("login")).map(|| {
     let mut login_success_response = Response::new("Login successfully!!");
     let headers = login_success_response.headers_mut();
-    headers.append(
-      "Set-Cookie",
-      HeaderValue::from_static("world=123ABC;"),
-    );
-    headers.append(
-      "Set-Cookie",
-      HeaderValue::from_static("hello=ABC123;"),
-    );
+    headers.append("Set-Cookie", HeaderValue::from_static("world=123ABC;"));
+    headers.append("Set-Cookie", HeaderValue::from_static("hello=ABC123;"));
     headers.append("Access-Control-Allow-Origin", HeaderValue::from_static("*"));
     login_success_response
   });

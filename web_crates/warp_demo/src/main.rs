@@ -1,6 +1,6 @@
 use std::{collections::HashMap, env, time::Duration};
 
-use warp::{filters::cookie, Filter};
+use warp::Filter;
 
 const WEB_DIR: &str = "web/";
 
@@ -50,7 +50,9 @@ async fn main() -> Result<(), ()> {
 
   let apis = hello.or(hi).or(items).with(log);
 
-  warp::serve(apis.or(dir_static)).run(([0, 0, 0, 0], 3000)).await;
+  warp::serve(apis.or(dir_static))
+    .run(([0, 0, 0, 0], 3000))
+    .await;
 
   Ok(())
 }
