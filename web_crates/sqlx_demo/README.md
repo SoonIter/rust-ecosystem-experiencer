@@ -30,9 +30,16 @@ volumes:
 docker compose up # 0.0.0.0:5432
 ```
 
-### pgAdmin
+### pgcli or pgAdmin
 
 ```sh
+# pgcli
+brew install pgcli
+pgcli postgres://postgres:password@localhost:5432/todos
+```
+
+```sh
+#pgAdmin
 docker pull dpage/pgadmin4
 docker run -d -p 5433:80 --name pgadmin4 -e PGADMIN_DEFAULT_EMAIL=test@123.com -e PGADMIN_DEFAULT_PASSWORD=123456 dpage/pgadmin4 # 0.0.0.0:5433
 ```
