@@ -1,5 +1,5 @@
 # https://taplo.tamasfe.dev/configuration/formatter-options.html
-include = ["Cargo.toml", "crates/**/*.toml", "tasks/**/*.toml"]
+include = ["Cargo.toml", "*_crates/**/*.toml"]
 
 [formatting]
 align_entries = true
