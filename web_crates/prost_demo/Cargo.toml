@@ -1,0 +1,9 @@
+[package]
+edition = "2021"
+name    = "prost_demo"
+version = "0.1.0"
+
+[dependencies]
+
+[build-dependencies]
+tonic-build = "0.11.0"
